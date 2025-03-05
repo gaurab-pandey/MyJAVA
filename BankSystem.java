@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 abstract class BankAccount {
     protected double balance;
     protected int accountNumber;
@@ -13,7 +12,9 @@ abstract class BankAccount {
 
     // Abstract methods for deposit, withdraw, and interest calculation
     abstract void deposit(double amount);
+
     abstract void withdraw(double amount);
+
     abstract double calculateInterest();
 
     // Method to display account details
@@ -22,9 +23,8 @@ abstract class BankAccount {
     }
 }
 
-
 class SavingsAccount extends BankAccount {
-    private static final double INTEREST_RATE = 0.05; 
+    private static final double INTEREST_RATE = 0.05;
 
     public SavingsAccount(int accountNumber, double balance) {
         super(accountNumber, balance);
@@ -56,9 +56,8 @@ class SavingsAccount extends BankAccount {
     }
 }
 
-
 class CurrentAccount extends BankAccount {
-    private static final double INTEREST_RATE = 0.04; 
+    private static final double INTEREST_RATE = 0.04;
 
     public CurrentAccount(int accountNumber, double balance) {
         super(accountNumber, balance);
@@ -74,7 +73,6 @@ class CurrentAccount extends BankAccount {
         }
     }
 
-    
     void withdraw(double amount) {
         if (balance >= amount) {
             balance -= amount;
@@ -90,26 +88,22 @@ class CurrentAccount extends BankAccount {
     }
 }
 
-
 public class BankSystem {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
-        
         System.out.print("Enter Savings Account Number: ");
         int savingsAccNum = myScanner.nextInt();
         System.out.print("Enter Savings Account Initial Balance: ");
         double savingsBalance = myScanner.nextDouble();
         BankAccount savings = new SavingsAccount(savingsAccNum, savingsBalance);
 
-     
         System.out.print("Enter Current Account Number: ");
         int currentAccNum = myScanner.nextInt();
         System.out.print("Enter Current Account Initial Balance: ");
         double currentBalance = myScanner.nextDouble();
         BankAccount current = new CurrentAccount(currentAccNum, currentBalance);
 
-        
         System.out.print("Enter amount to deposit in Savings Account: ");
         double savingsDeposit = myScanner.nextDouble();
         savings.deposit(savingsDeposit);
@@ -134,6 +128,6 @@ public class BankSystem {
         System.out.println("Savings Interest: " + savings.calculateInterest());
         System.out.println("Current Interest: " + current.calculateInterest());
 
-        myScanner.close(); 
+        myScanner.close();
     }
 }

@@ -38,8 +38,7 @@ class Rectangle extends Shape {
 
 public class Abstraction4 {
     public static void main(String[] args) {
-        Circle myCircle = new Circle(3); // Both approaches [Shape and circle]are valid, but using the abstract class is
-                                         // better practice because it promotes polymorphism
+        Circle myCircle = new Circle(3); /*  Both approaches [Shape and circle]are valid, but using the abstract class is better practice because it promotes polymorphism*/
         Shape myRectangle = new Rectangle(4, 5);
 
         System.out.println("Area of Circle: " + myCircle.area());

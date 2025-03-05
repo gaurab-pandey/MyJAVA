@@ -1,6 +1,6 @@
 public class stringExample {
     public static void main(String[] args) {
-        // Creating Strings
+       
         String str1 = "Hello";
         String str2 = "World";
         String str3 = "  Java Programming  ";

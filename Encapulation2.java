@@ -3,11 +3,10 @@ class Book {
     private String author;
     private double price;
 
-   
     public Book(String title, String author, double price) {
         this.title = title;
         this.author = author;
-        setPrice(price);  // ensure invalidity early 
+        setPrice(price); // ensure invalidity early
     }
 
     // Setter and Getter for title
@@ -41,7 +40,6 @@ class Book {
         return price;
     }
 
-  
     public void displayInfo() {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
@@ -52,12 +50,10 @@ class Book {
 public class Encapulation2 {
     public static void main(String[] args) {
 
-        
         Book book1 = new Book("Java Programming", "James Gosling", 39.99);
         Book book2 = new Book("Data Structures", "Mark Allen", 29.99);
-        Book book3 = new Book("The Clean Code", "Robert C. Martin", 0);  // Invalid price
+        Book book3 = new Book("The Clean Code", "Robert C. Martin", 0); // Invalid price
 
-        
         book1.displayInfo();
         book2.displayInfo();
         book3.displayInfo();

@@ -30,7 +30,7 @@ public class reverseArray {
 
        
         int n = arr.length;
-        for (int i = 0; i < n / 2; i++) {
+        for (int i = 0; i < n / 2; i++) {// loop will run 2 time 
           
             int temp = arr[i]; //temp= arr[0]=1
             arr[i] = arr[n - 1 - i]; //ar[i]=arr[4-1-0]=arr[4]=5
